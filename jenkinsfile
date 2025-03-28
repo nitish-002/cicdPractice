@@ -1,0 +1,24 @@
+pipeline{
+    agent any
+    tools{
+        maven 'maven'
+    }
+    stages{
+        stage('Checkout'){
+                steps{
+                    Checkout scm
+                }
+        }
+
+        stage('Build'){
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+        steps('Test'){
+            steps{
+                sh 'mvn test'
+            }
+        }
+    }
+}
