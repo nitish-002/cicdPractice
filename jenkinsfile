@@ -4,11 +4,6 @@ pipeline{
         maven 'maven'
     }
     stages{
-        stage('Checkout'){
-                steps{
-                    git branch: 'main', url:'https://github.com/nitish-002/cicdPractice.git'
-                }
-        }
 
         stage('Build'){
             steps{
