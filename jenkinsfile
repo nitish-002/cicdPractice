@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('Checkout'){
                 steps{
-                    Checkout scm
+                    git branch: 'main', url:'https://github.com/nitish-002/cicdPractice.git'
                 }
         }
 
